@@ -1,0 +1,7 @@
+WELCOME = "=== Calculadora ==="
+PROMPT_A = "Ingrese el primer número: "
+PROMPT_B = "Ingrese el segundo número: "
+PROMPT_OP = "Operación (+, -, *, /): "
+INVALID_NUMBER = "Error: ingrese un número válido."
+INVALID_OP = "Error: operación no soportada."
+RESULT_TEMPLATE = "Resultado: {}"
