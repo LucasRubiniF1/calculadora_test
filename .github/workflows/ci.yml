@@ -22,5 +22,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run tests with coverage
-        run: pytest tests/ --cov=app --cov-report=term-missing -v
+      - name: Run tests with coverage and HTML report
+        run: pytest tests/ --cov=app --cov-report=term-missing -v --html=reports/report.html --self-contained-html
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-report
+          path: reports/report.html
